@@ -5,7 +5,7 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ViewScoped;
 import javax.faces.model.SelectItem;
 
 import br.com.piloto.model.Grupo;
@@ -14,7 +14,7 @@ import br.com.piloto.model.Permissao;
 import br.com.piloto.util.PilotoUtil;
 import br.com.topsys.util.TSUtil;
 
-@SessionScoped
+@ViewScoped
 @ManagedBean(name = "grupoFaces")
 public class GrupoFaces extends CrudFaces<Grupo> {
 	
