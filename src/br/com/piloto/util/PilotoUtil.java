@@ -5,7 +5,7 @@ import javax.faces.context.FacesContext;
 
 import br.com.topsys.util.TSUtil;
 
-public class PilotoUtil {
+public final class PilotoUtil {
 
 	private PilotoUtil(){
 		

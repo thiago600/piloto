@@ -8,7 +8,7 @@ import br.com.topsys.util.TSCryptoUtil;
 import br.com.topsys.util.TSUtil;
 import br.com.topsys.web.util.TSFacesUtil;
 
-public class UsuarioUtil {		    
+public final class UsuarioUtil {		    
     
     private UsuarioUtil(){
     	

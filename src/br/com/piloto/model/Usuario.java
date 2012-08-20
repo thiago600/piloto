@@ -108,6 +108,24 @@ public class Usuario extends TSActiveRecordAb<Usuario> {
 		this.confirmaSenha = confirmaSenha;
 	}
 	
+	public Grupo getGrupo() {
+		return grupo;
+	}
+
+	public void setGrupo(Grupo grupo) {
+		this.grupo = grupo;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
+
+	
 	@Override
 	public List<Usuario> findByModel(String... fieldsOrderBy) {
 		
@@ -154,22 +172,6 @@ public class Usuario extends TSActiveRecordAb<Usuario> {
 		return true;
 	}
 
-	public Grupo getGrupo() {
-		return grupo;
-	}
-
-	public void setGrupo(Grupo grupo) {
-		this.grupo = grupo;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	
-	
+		
 
 }
