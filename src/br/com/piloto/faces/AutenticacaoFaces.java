@@ -33,7 +33,7 @@ public class AutenticacaoFaces extends TSMainFaces {
 
 		setTabAtiva(new Integer(0));
 
-		setNomeTela("¡rea de Trabalho");
+		setNomeTela("√Årea de Trabalho");
 		
 	}
 	
