@@ -24,7 +24,7 @@ import br.com.topsys.util.TSUtil;
 public class Usuario extends TSActiveRecordAb<Usuario> {
 
 	@Id
-	@SequenceGenerator(name = "USUARIOS_ID_SEQ", sequenceName = "usuarios_id_seq", allocationSize = 1)
+	@SequenceGenerator(name = "USUARIOS_ID_SEQ", sequenceName = "usuarios_adm_id_seq", allocationSize = 1)
 	@GeneratedValue(generator="USUARIOS_ID_SEQ", strategy=GenerationType.SEQUENCE)
 	private Long id;
 	
