@@ -22,6 +22,8 @@
  		<mapping class="br.com.piloto.model.Usuario" />
  		<mapping class="br.com.piloto.model.Permissao" />
  		<mapping class="br.com.piloto.model.Teste" />
+ 		<mapping class="br.com.piloto.model.Ricardo" />
+ 		
 
 	</session-factory>
 
