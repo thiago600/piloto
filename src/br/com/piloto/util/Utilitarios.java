@@ -6,6 +6,10 @@ import java.text.Normalizer;
 import java.util.Calendar;
 
 public final class Utilitarios {
+	
+	private Utilitarios(){
+		
+	}
 
     public static String tratarString(String valor) {
         if (!TSUtil.isEmpty(valor)) {

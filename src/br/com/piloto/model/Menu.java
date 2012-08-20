@@ -1,12 +1,9 @@
 package br.com.piloto.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -14,7 +11,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import br.com.piloto.util.PilotoUtil;
 import br.com.topsys.database.hibernate.TSActiveRecordAb;
 import br.com.topsys.util.TSUtil;
 
@@ -100,23 +96,6 @@ public final class Menu extends TSActiveRecordAb<Menu> {
 		this.menus = menus;
 	}
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((descricao == null) ? 0 : descricao.hashCode());
-		result = prime * result + ((flagAtivo == null) ? 0 : flagAtivo.hashCode());
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((managedBeanReset == null) ? 0 : managedBeanReset.hashCode());
-		result = prime * result + ((menuPai == null) ? 0 : menuPai.hashCode());
-		result = prime * result + ((menus == null) ? 0 : menus.hashCode());
-		result = prime * result + ((ordem == null) ? 0 : ordem.hashCode());
-		result = prime * result + ((url == null) ? 0 : url.hashCode());
-		return result;
-	}
-
-	
-
 	public String getManagedBeanReset() {
 		return managedBeanReset;
 	}
@@ -140,6 +119,22 @@ public final class Menu extends TSActiveRecordAb<Menu> {
 		query.append(" from Menu m where menuPai is not null and flagAtivo = true");
 				
 		return super.find(query.toString());
+	}
+	
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((descricao == null) ? 0 : descricao.hashCode());
+		result = prime * result + ((flagAtivo == null) ? 0 : flagAtivo.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((managedBeanReset == null) ? 0 : managedBeanReset.hashCode());
+		result = prime * result + ((menuPai == null) ? 0 : menuPai.hashCode());
+		result = prime * result + ((menus == null) ? 0 : menus.hashCode());
+		result = prime * result + ((ordem == null) ? 0 : ordem.hashCode());
+		result = prime * result + ((url == null) ? 0 : url.hashCode());
+		return result;
 	}
 
 	@Override
