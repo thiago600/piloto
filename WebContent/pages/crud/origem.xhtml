@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
 <ui:composition template="/resources/templates/templateCRUD.xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui" xmlns:f="http://java.sun.com/jsf/core">
 
 	<ui:param name="mbean" value="${origemFaces}" />
@@ -9,21 +8,21 @@
 
 		<h:panelGrid columns="1" style="width: 100%">
 
-			<p:outputLabel for="descricao" value="Descrição" />
-			<p:inputText id="descricao" value="#{mbeanModel.descricao}" required="true" requiredMessage="Descrição: obrigatório" style="width: 50%" maxlength="50" />
+			<p:outputLabel for="descricao" value="Descriï¿½ï¿½o" />
+			<p:inputText id="descricao" value="#{mbeanModel.descricao}" required="true" requiredMessage="Descriï¿½ï¿½o: obrigatï¿½rio" style="width: 50%" maxlength="50" />
 
 			<p:outputLabel for="pasta" value="Pasta" />
-			<p:inputText id="pasta" value="#{mbeanModel.pasta}" required="true" requiredMessage="Pasta: obrigatório" style="width: 50%" maxlength="50" />
+			<p:inputText id="pasta" value="#{mbeanModel.pasta}" required="true" requiredMessage="Pasta: obrigatï¿½rio" style="width: 50%" maxlength="50" />
 
 			<p:outputLabel for="tamanhoPasta" value="Tamanho da Pasta" />
-			<p:spinner id="tamanhoPasta" stepFactor="0.5" value="#{mbeanModel.tamanhoPasta}" min="0" required="true" requiredMessage="Tamanho da Pasta: Obrigatório"/>
+			<p:spinner id="tamanhoPasta" stepFactor="0.5" value="#{mbeanModel.tamanhoPasta}" min="0" required="true" requiredMessage="Tamanho da Pasta: Obrigatï¿½rio"/>
 
 			<p:outputLabel for="cbFlagAtivo" value="Ativo?" />
 			<p:selectBooleanCheckbox id="cbFlagAtivo" value="#{mbeanModel.flagAtivo}" />
 
 			<h:panelGrid id="pnlUpload" columns="2" columnClasses="coluna30, coluna80" style="width: 100%">
 
-				<p:fileUpload id="uploadLogo" cancelLabel="Cancelar" uploadLabel="Enviar" label="Selecionar" invalidFileMessage="Formato de arquivo inválido" fileUploadListener="#{mbean.upload}" showButtons="false" allowTypes="/(\.|\/)(jpe?g|png|gif)$/" update="pnlUpload" auto="true" style="width: 90%" />
+				<p:fileUpload id="uploadLogo" cancelLabel="Cancelar" uploadLabel="Enviar" label="Selecionar" invalidFileMessage="Formato de arquivo invï¿½lido" fileUploadListener="#{mbean.upload}" showButtons="false" allowTypes="/(\.|\/)(jpe?g|png|gif)$/" update="pnlUpload" auto="true" style="width: 90%" />
 
 				<h:panelGrid columns="1" style="width: 100%" rendered="#{!empty mbeanModel.logo}">
 					<img src="/#{mbean.logo}" height="100" width="100" />
@@ -39,14 +38,14 @@
 
 	<ui:define name="pesquisaCampos">
 
-		<p:outputLabel for="descricaoPesquisa" value="Descrição" />
+		<p:outputLabel for="descricaoPesquisa" value="Descriï¿½ï¿½o" />
 		<p:inputText id="descricaoPesquisa" value="#{mbeanPesquisaModel.descricao}" style="width: 40%" maxlength="50" />
 
 	</ui:define>
 
 	<ui:define name="colunasTabela">
 
-		<p:column headerText="Descrição" style="width: 30%">
+		<p:column headerText="Descriï¿½ï¿½o" style="width: 30%">
 			<h:outputText value="#{linha.descricao}" />
 		</p:column>
 

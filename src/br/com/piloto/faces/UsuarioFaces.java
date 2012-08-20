@@ -25,13 +25,15 @@ public class UsuarioFaces extends CrudFaces<Usuario> {
 	}
 
 	public String limpar() {
-		super.limpar();				
+		super.limpar();		
+		getCrudModel().setGrupo(new Grupo());
 		getCrudModel().setFlagAtivo(Boolean.TRUE);
 		return null;
 	}
 
 	public String limparPesquisa() {
-		super.limparPesquisa();		
+		super.limparPesquisa();	
+		getCrudPesquisaModel().setGrupo(new Grupo());
 		getCrudPesquisaModel().setFlagAtivo(Boolean.TRUE);
 		return null;
 	}
